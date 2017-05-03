@@ -31,7 +31,7 @@ public class BasicLuisDialog : LuisDialog<object>
     }
 
     [LuisIntent("saludo")]
-    public async Task MyIntent(IDialogContext context, LuisResult result)
+    public async Task SaludoIntent(IDialogContext context, LuisResult result)
     {
         await context.PostAsync($"Hola como estas"); //
         context.Wait(MessageReceived);
