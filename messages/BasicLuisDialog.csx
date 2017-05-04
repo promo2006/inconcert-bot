@@ -30,13 +30,6 @@ public class BasicLuisDialog : LuisDialog<object>
         context.Wait(MessageReceived);
     }
 
-    [LuisIntent("saludos")]
-    public async Task SaludoIntent(IDialogContext context, LuisResult result)
-    {
-        await context.PostAsync($"Tu quisiste decir saludos: {result}"); //
-        context.Wait(MessageReceived);
-    }
-
     [LuisIntent("saldo")]
     public async Task SaldoIntent(IDialogContext context, LuisResult result)
     {
