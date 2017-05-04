@@ -37,6 +37,13 @@ public class BasicLuisDialog : LuisDialog<object>
         context.Wait(MessageReceived);
     }
 
+    [LuisIntent("saldo")]
+    public async Task SaldoIntent(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"Tu quisiste decir : {result}"); //
+        context.Wait(MessageReceived);
+    }
+
     [LuisIntent("migracion")]
     public async Task MigracionIntent(IDialogContext context, LuisResult result)
     {
