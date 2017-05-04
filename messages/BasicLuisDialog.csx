@@ -30,17 +30,17 @@ public class BasicLuisDialog : LuisDialog<object>
         context.Wait(MessageReceived);
     }
 
-    [LuisIntent("saldo")]
-    public async Task SaldoIntent(IDialogContext context, LuisResult result)
+    [LuisIntent("saludos")]
+    public async Task SaludoIntent(IDialogContext context, LuisResult result)
     {
-        await context.PostAsync($"Tu quisiste decir saldo: {result}"); //
+        await context.PostAsync($"Hola como estas"); //
         context.Wait(MessageReceived);
     }
 
     [LuisIntent("migracion")]
     public async Task MigracionIntent(IDialogContext context, LuisResult result)
     {
-        await context.PostAsync($"Tu quisiste decir migracion: {result}"); //
+        await context.PostAsync($"Hola"); //
         context.Wait(MessageReceived);
     }
 }
